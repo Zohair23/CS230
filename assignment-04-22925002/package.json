@@ -1,0 +1,17 @@
+{
+  "name": "assignment-04-22925002",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assignment-04-backend.js", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node assignment-04-backend.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}
