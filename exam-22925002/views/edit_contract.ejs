@@ -1,0 +1,63 @@
+<h1>Edit Contract</h1>
+
+<form id="editContractForm" action="/contracts/<%= contract._id %>?_method=put" method="post">
+    <label for="contractDate">Contract Date:</label>
+    <input type="date" name="contractDate" id="contractDate" value="<%= contract.contractDate.toISOString().substr(0, 10) %>"><br><br>
+    <label for="propertyAddress">Property Address:</label>
+    <input type="text" name="propertyAddress" id="propertyAddress" value="<%= contract.propertyAddress %>"><br><br>
+    <label for="tenants">Tenants:</label>
+    <div id="tenantFields">
+        <% contract.tenants.forEach((tenant, index) => { %>
+            <div class="tenantField">
+                <input type="text" name="tenants[]" class="tenantInput" value="<%= tenant %>">
+                <button type="button" class="removeTenantButton">Remove</button>
+            </div>
+        <% }); %>
+    </div>
+    <button type="button" id="addTenantButton">Add Tenant</button><br><br>
+    <label for="landlord">Landlord:</label>
+    <input type="text" name="landlord" id="landlord" value="<%= contract.landlord %>"><br><br>
+    <label for="feeMonthly">Monthly Fee:</label>
+    <input type="number" name="feeMonthly" id="feeMonthly" value="<%= contract.feeMonthly %>"><br><br>
+    <label for="propertyDoorNumber">Property Door Number:</label>
+    <input type="number" name="propertyDoorNumber" id="propertyDoorNumber" value="<%= contract.propertyDoorNumber %>"><br><br>
+    <label for="contractLength">Contract Length:</label>
+    <select name="contractLength" id="contractLength">
+        <option value="Month" <%= contract.contractLength === 'Month' ? 'selected' : '' %>>Month</option>
+        <option value="Year" <%= contract.contractLength === 'Year' ? 'selected' : '' %>>Year</option>
+        <option value="Permanent" <%= contract.contractLength === 'Permanent' ? 'selected' : '' %>>Permanent</option>
+    </select><br><br>
+    <label for="propertyType">Property Type:</label>
+    <select name="propertyType" id="propertyType">
+        <option value="Apartment" <%= contract.propertyType === 'Apartment' ? 'selected' : '' %>>Apartment</option>
+        <option value="Semi-Detached" <%= contract.propertyType === 'Semi-Detached' ? 'selected' : '' %>>Semi-Detached</option>
+        <option value="Detached" <%= contract.propertyType === 'Detached' ? 'selected' : '' %>>Detached</option>
+        <option value="Bungalow" <%= contract.propertyType === 'Bungalow' ? 'selected' : '' %>>Bungalow</option>
+    </select><br><br>
+    <button type="submit">Update Contract</button>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const addTenantButton = document.getElementById('addTenantButton');
+        const tenantFields = document.getElementById('tenantFields');
+
+        addTenantButton.addEventListener('click', function () {
+            if (tenantFields.children.length < 3) {
+                const newTenantField = document.createElement('div');
+                newTenantField.classList.add('tenantField');
+                newTenantField.innerHTML = `
+                    <input type="text" name="tenants[]" class="tenantInput">
+                    <button type="button" class="removeTenantButton">Remove</button>
+                `;
+                tenantFields.appendChild(newTenantField);
+            }
+        });
+
+        tenantFields.addEventListener('click', function (event) {
+            if (event.target.classList.contains('removeTenantButton')) {
+                event.target.parentElement.remove();
+            }
+        });
+    });
+</script>

@@ -1,0 +1,11 @@
+<h1>Delete Landlord</h1>
+
+<form id="deleteLandlordForm" action="/landlordsDelete/<%= landlord._id %>?_method=delete" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_id" value="<%= landlord._id %>">
+    <p>Are you sure you want to delete this landlord?</p>
+    <button type="submit">Delete Landlord</button>
+</form>
+
+<script>
+</script>

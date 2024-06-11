@@ -1,0 +1,36 @@
+<h1>Contracts</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Contract Date</th>
+            <th>Property Address</th>
+            <th>Landlord</th>
+            <th>Tenants</th>
+            <th>Monthly Fee</th>
+            <th>Property Door Number</th>
+            <th>Contract Length</th>
+            <th>Property Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% contracts.forEach(contract => { %>
+            <tr>
+                <td><%= contract._id %></td>
+                <td><%= contract.contractDate.toISOString().substr(0, 10) %></td>
+                <td><%= contract.propertyAddress %></td>
+                <td><%= contract.landlord %></td>
+                <td>
+                    <% contract.tenants.forEach(tenant => { %>
+                        <%= tenant %><br>
+                    <% }) %>
+                </td>
+                <td><%= contract.feeMonthly %></td>
+                <td><%= contract.propertyDoorNumber %></td>
+                <td><%= contract.contractLength %></td>
+                <td><%= contract.propertyType %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

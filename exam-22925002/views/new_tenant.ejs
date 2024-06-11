@@ -1,0 +1,36 @@
+<h1>Create New Tenant</h1>
+
+<form id="newTenantForm" action="/tenants" method="post">
+    <label for="title">Title:</label>
+    <select name="title" id="title">
+        <option value="Mx">Mx</option>
+        <option value="Ms">Ms</option>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+        <option value="Dr">Dr</option>
+        <option value="Prof">Prof</option>
+    </select><br><br>
+    <label for="firstNames">First Names:</label>
+    <input type="text" name="firstNames" id="firstNames"><br><br>
+    <label for="surname">Surname:</label>
+    <input type="text" name="surname" id="surname"><br><br>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" name="phoneNumber" id="phoneNumber"><br><br>
+    <label for="emailAddress">Email Address:</label>
+    <input type="email" name="emailAddress" id="emailAddress"><br><br>
+    <label for="addressLine1">Address Line 1:</label>
+    <input type="text" name="homeAddress.addressLine1" id="addressLine1"><br><br>
+    <label for="addressLine2">Address Line 2:</label>
+    <input type="text" name="homeAddress.addressLine2" id="addressLine2"><br><br>
+    <label for="town">Town:</label>
+    <input type="text" name="homeAddress.town" id="town"><br><br>
+    <label for="county">County:</label>
+    <input type="text" name="homeAddress.county" id="county"><br><br>
+    <label for="eircode">Eircode:</label>
+    <input type="text" name="homeAddress.eircode" id="eircode"><br><br>
+    <button type="submit">Create Tenant</button>
+</form>
+
+<script>
+</script>
