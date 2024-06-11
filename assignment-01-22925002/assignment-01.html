@@ -1,0 +1,93 @@
+<!--use chrome on 100% zoom-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Pyramid</title>
+    <link rel="stylesheet" href="./assignment-01.css">
+</head>
+
+<body>
+    <div>
+        <label for="dateInput">Enter Date:</label>
+        <input type="text" id="dateInput" placeholder="YYYY-MM-DD">
+        <button onclick="validateDate()">Validate Date</button>
+        <p id="dateOutput"></p>
+    </div>
+
+    <p id="ageGroupDisplay" style="text-align: center; font-size: 18px; margin-bottom: 10px;"></p>
+    <button onclick="toggleAgeGroup()">Toggle Age Group</button>
+
+    <div style = "position:relative; left:20px; top:10px;font-size: 12px">
+        <strong>Shelve ranges</strong>
+    </div>
+
+    <div class="colorSquare" id="colorSquare1"></div>
+    <span class="colorText">Below Requirement</span>
+    <div class="colorSquare" id="colorSquare2"></div>
+    <span class="colorText">Within Requirement</span>
+    <div class="colorSquare" id="colorSquare3"></div>
+    <span class="colorText">Above Requirement</span>
+    
+    
+    
+
+     <div style = "position:relative; left:20px; top:10px;font-size: 12px">
+        <strong>Shelves</strong>
+     </div>
+
+    <div class="colorSquare" id="colorSquare4"></div>
+    <span class="colorText">Food and drinks in high in fat,sugar and salt</span>
+    <div class="colorSquare" id="colorSquare5"></div>
+    <span class="colorText">Fats,spreads and oils</span>
+    <div class="colorSquare" id="colorSquare6"></div>
+    <span class="colorText">Meat,poultry,fish,eggs,beans and nuts</span>
+    <div class="colorSquare" id="colorSquare7"></div>
+    <span class="colorText">Milk,yogurt and cheese</span>
+    <div class="colorSquare" id="colorSquare8"></div>
+    <span class="colorText">Wholemeal cereals and breads,potatoes,pasta and rice</span>
+    <div class="colorSquare" id="colorSquare9"></div>
+    <span class="colorText">Vegetables,salad and fruit</span>
+
+    <div style = "position:relative; left:525px; top:10px;font-size: 24px">
+        <strong>The Food Pyramid</strong>
+     </div>
+     
+    <div class="triangle" id="triangle1">
+        <span class="numberCircle tabular" onclick="changeValue('triangle1', '+')">+</span>
+        <span class="numberCircle tabular" id="xValue1">0</span>
+        <span class="numberCircle tabular" onclick="changeValue('triangle1', '-')">-</span>
+    </div>
+    <div class="trapezium" id="trapezium2">
+        <span class="numberCircle tabular" onclick="changeValue('trapezium2', '+')">+</span>
+        <span class="numberCircle tabular" id="xValue2">0</span>
+        <span class="numberCircle tabular" onclick="changeValue('trapezium2', '-')">-</span>
+    </div>
+    <div class="trapezium2" id="trapezium3">
+        <span class="numberCircle tabular" onclick="changeValue('trapezium3', '+')">+</span>
+        <span class="numberCircle tabular" id="xValue3">0</span>
+        <span class="numberCircle tabular" onclick="changeValue('trapezium3', '-')">-</span>
+    </div>
+    <div class="trapezium3" id="trapezium4">
+        <span class="numberCircle tabular" onclick="changeValue('trapezium4', '+')">+</span>
+        <span class="numberCircle tabular" id="xValue4">0</span>
+        <span class="numberCircle tabular" onclick="changeValue('trapezium4', '-')">-</span>
+    </div>
+    <div class="trapezium4" id="trapezium5">
+        <span class="numberCircle tabular" onclick="changeValue('trapezium5', '+')">+</span>
+        <span class="numberCircle tabular" id="xValue5">0</span>
+        <span class="numberCircle tabular" onclick="changeValue('trapezium5', '-')">-</span>
+    </div>
+    <div class="trapezium5" id="trapezium6">
+        <span class="numberCircle tabular" onclick="changeValue('trapezium6', '+')">+</span>
+        <span class="numberCircle tabular" id="xValue6">0</span>
+        <span class="numberCircle tabular" onclick="changeValue('trapezium6', '-')">-</span>
+    </div>
+
+    <script src="./assignment-01.js" defer></script>
+</body>
+
+</html>
+

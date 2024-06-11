@@ -1,0 +1,340 @@
+:root {
+    --trapezium-height: 90px;
+    --triangle-height: 72px; 
+}
+
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+body {
+    font: 14px/24px Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.numberCircle {
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid;
+    font-size: 32px;
+    background-color: white;
+    width: 40px; 
+    height: 40px; 
+    text-align: center; 
+    line-height: 40px; 
+    margin: 0 5px; 
+    visibility: hidden; 
+}
+
+.numberCircle:nth-child(2) {
+    visibility: visible; 
+}
+
+.trapezium:hover .numberCircle,
+.trapezium2:hover .numberCircle,
+.trapezium3:hover .numberCircle,
+.trapezium4:hover .numberCircle,
+.trapezium5:hover .numberCircle,
+.triangle:hover .numberCircle {
+    visibility: visible; 
+}
+
+
+
+.triangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    border-left: var(--triangle-height) solid transparent;
+    border-right: var(--triangle-height) solid transparent;
+    border-bottom: var(--triangle-height) solid red;
+    position: relative;
+    margin: 50px auto 80px; 
+}
+
+.triangle .numberCircle {
+    width: 50px;    
+    margin-top: 90px; 
+    font-size: 20px; 
+    display: inline-block; 
+    position: relative;
+}
+
+
+
+
+
+
+.trapezium {
+    background-color: orange;
+    width: 165px;
+    height: var(--trapezium-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: -70px auto 20px; 
+}
+
+.trapezium::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid orange;
+    border-left: var(--trapezium-height) solid transparent;
+    position: absolute;
+    right: 100%;
+    top: 0px;
+}
+
+.trapezium::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid orange;
+    border-right: var(--trapezium-height) solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+}
+
+
+
+
+
+.trapezium2 {
+    background-color: #fff44f;
+    width: 380px;
+    height: var(--trapezium-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: -10px auto 80px; 
+}
+
+.trapezium2::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #fff44f;
+    border-left: var(--trapezium-height) solid transparent;
+    position: absolute;
+    right: 100%;
+    top: 0px;
+}
+
+.trapezium2::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #fff44f;
+    border-right: var(--trapezium-height) solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+}
+
+
+
+.trapezium3 {
+    background-color: #1a77fa;
+    width: 560px;
+    height: var(--trapezium-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: -80px auto 80px; 
+}
+
+.trapezium3::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #1a77fa;
+    border-left: var(--trapezium-height) solid transparent;
+    position: absolute;
+    right: 100%;
+    top: 0px;
+}
+
+.trapezium3::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #1a77fa;
+    border-right: var(--trapezium-height) solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+}
+
+
+
+.trapezium4 {
+    background-color: #845416;
+    width: 740px;
+    height: var(--trapezium-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: -80px auto 80px; 
+}
+
+.trapezium4::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #845416;
+    border-left: var(--trapezium-height) solid transparent;
+    position: absolute;
+    right: 100%;
+    top: 0px;
+}
+
+.trapezium4::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #845416;
+    border-right: var(--trapezium-height) solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+}
+
+
+
+
+.trapezium5 {
+    background-color: #32cd32;
+    width: 920px;
+    height: var(--trapezium-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: -80px auto 80px; 
+}
+
+.trapezium5::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #32cd32;
+    border-left: var(--trapezium-height) solid transparent;
+    position: absolute;
+    right: 100%;
+    top: 0px;
+}
+
+.trapezium5::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: var(--trapezium-height) solid #32cd32;
+    border-right: var(--trapezium-height) solid transparent;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#dateInput {
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    display: inline;
+}
+
+
+#ageGroupDisplay {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.colorSquare {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    margin-right: 10px;
+}
+
+#colorSquare1 {
+    background-color: green;
+}
+
+#colorSquare2 {
+    background-color: yellow;
+}
+
+#colorSquare3 {
+    background-color: red;
+}
+
+.colorText {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+
+#colorSquare4 {
+    background-color: red;
+}
+
+#colorSquare5 {
+    background-color: orange;
+}
+
+#colorSquare6 {
+    background-color: #fff44f;
+}
+
+#colorSquare7 {
+    background-color: #1a77fa;
+}
+
+#colorSquare8 {
+    background-color: #845416;
+}
+
+#colorSquare9 {
+    background-color: #32cd32;
+}
