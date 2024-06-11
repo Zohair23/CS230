@@ -1,0 +1,158 @@
+<!--References-->
+<!--https://www.youtube.com/watch?v=czZ1PvNW5hk-->
+<!--https://www.youtube.com/watch?v=iDA0kF5lrVk-->
+<!--https://www.w3schools.com/html/html_tables.asp-->
+<!--https://www.w3schools.com/tags/tag_tr.asp-->
+<!--https://www.w3schools.com/tags/tag_th.asp-->
+<!--https://www.w3schools.com/tags/tag_thead.asp-->
+<!--https://www.w3schools.com/tags/tag_tbody.asp-->
+<!--https://www.w3schools.com/tags/att_global_contenteditable.asp-->
+<!--https://www.w3schools.com/tags/tag_button.asp-->
+<!--https://www.w3schools.com/tags/tag_td.asp-->
+<!--https://www.w3schools.com/jsref/event_onclick.asp-->
+<!--https://www.w3schools.com/html/html_id.asp-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grades Table</title>
+  <link rel = "stylesheet" href = "./assignment-03.css">
+</head>
+<body>
+  <table id="gradeTable">
+    <thead>
+      <tr>
+        <th style = "text-align: center;">Student Name</th>
+        <th style = "text-align: center;">Student ID</th>
+        <th>Assignment 1</th>
+        <th>Assignment 2</th>
+        <th>Assignment 3</th>
+        <th>Assignment 4</th>
+        <th>Assignment 5</th>
+        <th class="average-header" onclick="toggleAveragePresentation()">Average [%]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="true">Matthew Anderson</td>
+        <td contenteditable="true">123456</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Jessica Taylor</td>
+        <td contenteditable="true">234567</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">John Smith</td>
+        <td contenteditable="true">345678</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">William Wilson</td>
+        <td contenteditable="true">456789</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Olivia Martinez</td>
+        <td contenteditable="true">567890</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Jennifer Davis</td>
+        <td contenteditable="true">012345</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">David Jones</td>
+        <td contenteditable="true">678901</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Sarah Brown</td>
+        <td contenteditable="true">789012</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Michael Williams</td>
+        <td contenteditable="true">890123</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Emily Johnson</td>
+        <td contenteditable="true">901234</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td contenteditable="true" class="yellow-bg">-</td>
+        <td class="average">-</td>
+        <td class="delete-cell"><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <p id="unsubmittedCount"></p>
+  <button onclick="addRow()">Add Row</button>
+  <button onclick="addColumn()">Add Column</button>
+  <button onclick="saveTableState()">Save State</button>
+  <button onclick="restoreTableState()">Restore State</button>
+  <script src = "./assignment-03.js"></script>
+
+</body>
+</html>

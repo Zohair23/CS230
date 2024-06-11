@@ -1,0 +1,67 @@
+/*References*/
+/*https://www.w3schools.com/cssref/sel_nth-child.php*/
+/*https://www.w3schools.com/css/css_table.asp*/
+/*https://www.w3schools.com/css/*/
+/*https://www.w3schools.com/cssref/sel_attr_contain.php*/
+/*https://www.w3schools.com/cssref/index.php*/
+/*https://www.w3schools.com/css/css_important.asp*/
+/*https://www.w3schools.com/cssref/sel_not.php*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #878787;
+  color: rgb(0, 0, 0);
+  text-align: center; 
+}
+tr:nth-child(even) {
+  background-color: #eaeaea; 
+}
+tr:nth-child(odd) {
+  background-color: #d1d1d1;
+}
+
+td:empty {
+  background-color: yellow;
+  text-align: center; 
+}
+.red-bg {
+  color: white !important;
+  background-color: red;
+}
+.yellow-bg {
+  background-color: yellow;
+}
+.average {
+  color: black; 
+  width: 100px;
+  text-align: right; 
+}
+
+td:nth-child(1),
+td:nth-child(2) {
+  text-align: left !important; 
+}
+td.dash {
+  text-align: center; 
+}
+td[contenteditable="true"]:not(.average) {
+  width: 50px; 
+  text-align: center; 
+}
+
+.right-align {
+  text-align: right;
+}
+
+.delete-cell {
+width: 50px; 
+}
