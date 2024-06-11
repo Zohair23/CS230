@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <!--head-->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--my title-->
+    <title>My Simon Memory Game</title>
+    <!--load in the font (link provided through pdf)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <!--load in style sheet-->
+    <link rel="stylesheet" href="assignment-02.css" />
+  </head>
+  <!--body-->
+  <body>
+    <!--contain into one whole piece-->
+    <div class="contain">
+      <div class="wrap">
+        <!--big circle-->
+        <div class="bigcircle"></div>
+          <!--medium circles behind the colors-->
+          <div class="mediumcircle1"></div>
+          <div class="mediumcircle2"></div>
+          <div class="mediumcircle3"></div>
+          <div class="mediumcircle4"></div>
+          <div class="greencolor circle"></div> 
+        <div class="redcolor circle"></div>
+        <div class="bluecolor circle"></div>
+        <div class="yellowcolor circle"></div>
+        <div id="colorCircleLight"></div>
+        <!--high score display-->
+        <div id="highestScore">
+          <p><span id="highestScoreValue">00</span></p>
+        </div>
+        <div id="count">00</div>
+        <button id="start">START</button>
+      </div>
+    </div>
+    <!--colored circles-->
+    
+    <!--load in script-->
+    <script src="assignment-02.js"></script>
+  </body>
+</html>

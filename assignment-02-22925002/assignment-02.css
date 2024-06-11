@@ -1,0 +1,293 @@
+/*references*/
+/*https://www.w3schools.com/css/default.asp*/
+/*https://www.w3schools.com/cssref/index.php*/
+/*font specified from pdf*/
+/*color picker from google*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .orbitron-toUse {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #ffffff;
+  }
+  .wrap {
+    background-color: #ffffff;
+    height: 37.5em;
+    width: 37.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.5em;
+  }
+  .bigcircle {
+    border-radius: 50%;
+        border: 2px solid;
+        font-size: 32px;
+        
+        text-align: center; 
+        line-height: 40px; 
+        margin: 0 5px; 
+        visibility: visible; 
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        width: 250px; 
+    height: 250px;
+    margin: 185px 174px;   
+    border-color: grey;
+    background-color: rgba(0, 0, 0, 0.881);
+        
+  }
+  .circle {
+    height: 13.12em;
+    width: 13.12em;
+    position: absolute;
+    cursor: pointer;
+  }
+  .greencolor {
+    border-radius: 50%;
+        border: 2px solid;
+        font-size: 32px;
+        background-color: #068e0f;
+        width: 140px; 
+        height: 140px; 
+        text-align: center; 
+        line-height: 40px; 
+        margin: 0 5px; 
+        visibility: visible; 
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        margin: 130px 110px;
+  }
+  .redcolor {
+    border-radius: 50%;
+        border: 2px solid;
+        font-size: 32px;
+        width: 140px; 
+        height: 140px; 
+        text-align: center; 
+        line-height: 40px; 
+        margin: 0 5px; 
+        visibility: visible; 
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        margin: 130px 351px;
+    background-color: #950a03;
+  }
+  .bluecolor {
+    border-radius: 50%;
+        border: 2px solid;
+        font-size: 32px;
+        width: 140px; 
+        height: 140px; 
+        text-align: center; 
+        line-height: 40px; 
+        margin: 0 5px; 
+        visibility: visible; 
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        
+        margin: 350px 351px;
+    background-color: #01118a;
+  }
+  .yellowcolor {
+    border-radius: 50%;
+        border: 2px solid;
+        font-size: 32px;
+        width: 140px; 
+        height: 140px; 
+        text-align: center; 
+        line-height: 40px; 
+        margin: 0 5px; 
+        visibility: visible; 
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        background-color: #839102;
+    margin: 350px 110px;
+  }
+  .mediumcircle1 {
+    position: absolute;
+    content: "";
+ 
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 160px; 
+    height: 160px;
+    margin: -100px -120px;  
+    background-color: rgb(65, 65, 65);
+  }
+  .mediumcircle2 {
+    position: absolute;
+    content: "";
+ 
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 160px; 
+    height: 160px;
+    margin: -100px 120px;  
+    background-color: rgb(65, 65, 65);
+  }
+  .mediumcircle3 {
+    position: absolute;
+    content: "";
+
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 160px; 
+    height: 160px;
+    margin: 120px -120px;  
+    background-color: rgb(65, 65, 65);
+  }
+  .mediumcircle4 {
+    position: absolute;
+    content: "";
+
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 160px; 
+    height: 160px;
+    margin: 120px 120px;  
+    background-color: rgb(65, 65, 65);
+  }
+  #count {
+    display: inline-block;
+    border-radius: 12%;
+    border: 2px solid;
+    font-size: 20px;
+    background-color: rgb(207, 205, 205);
+    width: 36px; 
+    height: 32px; 
+    text-align: center; 
+    line-height: 29px; 
+    margin: 290px 334px; 
+    visibility: visible; 
+    font-weight: 500;
+
+    font-size: medium;
+    color: #000000; 
+    position: absolute;
+  }
+
+  #start {
+    display: inline-block;
+    border-radius: 12%;
+    border: 2px solid;
+    background-color: rgb(207, 205, 205);
+    height: 31px; 
+    width: 60px;
+    text-align: center; 
+    line-height: 0px; 
+    visibility: visible; 
+    position:absolute;
+    margin: 290.5px 270px;
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 5px;
+
+    
+}
+
+ #highestScore {
+    display: inline-block;
+    border-radius: 12%;
+    border: 2px solid;
+    font-size: 20px;
+    background-color: rgb(207, 205, 205);
+    width: 36px; 
+    height: 32px; 
+    text-align: center; 
+    line-height: 10px; 
+    visibility: visible; 
+    position:absolute;
+    margin: 290px 230px;
+    
+
+  }
+
+  #highestScoreValue {
+    font-size: medium;
+    color: #000000; 
+    font-weight: 500;
+
+  }
+  .hide {
+    display: none;
+  }
+  .contain {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contain button {
+    background-color: #ffffff;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    padding: 1em 2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+  }
+  .contain p {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 1em;
+  }
+  .contain span {
+    font-weight: 600;
+  }
+
+
+
+  #colorCircleLight {
+
+    border-radius: 50%;
+    font-size: 32px;
+    text-align: center; 
+    line-height: 40px; 
+    margin: 0 5px; 
+    visibility: visible; 
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    margin: 335px 296px; 
+    background-color: rgba(255, 0, 0, 0.936);
+    border: 0px;
+}
